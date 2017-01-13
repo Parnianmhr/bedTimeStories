@@ -1,0 +1,12 @@
+<%= form_for @page do |f| %>
+
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+
+
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+
+  <%= f.submit (@page.new_record? ? "Create" : "Update") %>
+
+<% end %>

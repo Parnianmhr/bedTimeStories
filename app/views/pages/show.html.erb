@@ -2,3 +2,5 @@
 
 <p><%= image_tag @page.image_url %></p>
 <p><%= @page.text%></p>
+
+<%= link_to "[Edit]", edit_page_path(@page.id) %>

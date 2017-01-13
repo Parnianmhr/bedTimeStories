@@ -40,7 +40,7 @@ class PagesController < ApplicationController
 
       @page.destroy
 
-      redirect_to root_path
+      redirect_to pages_path
     end
 
 

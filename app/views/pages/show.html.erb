@@ -4,3 +4,4 @@
 <p><%= @page.text%></p>
 
 <%= link_to "[Edit]", edit_page_path(@page.id) %>
+<%= link_to "[Delete]", page_path(@page.id), method: :delete, data: { confirm: "Are you sure?" } %>

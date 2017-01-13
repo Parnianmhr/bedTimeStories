@@ -1,40 +1,52 @@
 class PagesController < ApplicationController
 
   def index
-    @pages = Page.all
-  end
+      @pages = Page.all
+    end
 
-  def show
-    @page = Page.find(params[:id])
-  end
+    def show
+      @page = Page.find(params[:id])
+    end
 
-  def create
-    @page = Page.new(page_params)
+    def new
+      @page = Page.new
+    end
 
-    if @page.save
-       redirect_to @page
-    else
-       render 'new'
+    def create
+      @page = Page.new(page_params)
+      if @page.save
+         redirect_to @page
+      else
+         render 'new'
+      end
+    end
+
+    def edit
+      @page = Page.find(params[:id])
+    end
+
+    def update
+      @page = Page.find(params[:id])
+
+      if @page.update_attributes(page_params)
+        redirect_to @page
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      @page = Page.find(params[:id])
+
+      @page.destroy
+
+      redirect_to root_path
+    end
+
+
+    private
+
+    def page_params
+      params.require(:page).permit(:image_url, :text, :book_id)
     end
   end
-
-  def edit
-    @page = Page.find(params[:id])
-  end
-
-  def update
-    @page = Page.find(params[:id])
-
-    if @page.update_attributes(page_params)
-      redirect_to @page
-    else
-      render "edit"
-    end
-  end
-
-  private
-
-  def page_params
-    params.require(:page).permit(:text, :image_url, :book_id)
-  end
-end

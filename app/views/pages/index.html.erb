@@ -3,3 +3,5 @@
 <% @pages.each do |page| %>
   <p><%= link_to "Page #{page.id}", page_path(page.id) %></p>
 <% end %>
+
+<%= link_to "[New]", new_page_path %>

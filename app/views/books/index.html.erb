@@ -4,3 +4,5 @@
   <p><%= link_to book.title, pages_path(book.id) %></p>
   <%= image_tag book.image_url %>
 <% end %>
+
+<%= link_to "[New Book]", new_book_path %>

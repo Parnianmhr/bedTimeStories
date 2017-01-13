@@ -1,0 +1,6 @@
+<h1>Librabry</h1>
+
+<% @books.each do |book| %>
+  <p><%= book.title %></p>
+  <%= image_tag book.image_url %> 
+<% end %>

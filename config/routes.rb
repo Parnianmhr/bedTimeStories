@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   resources :books
   resources :pages
+
+  get "dinosaurs/:id" => "dinosaurs#show", as: :dinosaur
 end

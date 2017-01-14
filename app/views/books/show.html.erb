@@ -1,0 +1,24 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @book.title %>
+</p>
+
+<h4>List of pages</h4>
+
+<% if @book.pages.any? %>
+  <ul>
+    <% @book.pages.each do |page| %>
+      <li><%= link_to page.id, pages_path(page.id)%></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no pages in this book.</p>
+<% end %>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to "New", new_page_path %>
+<%= link_to 'Back', books_path %>

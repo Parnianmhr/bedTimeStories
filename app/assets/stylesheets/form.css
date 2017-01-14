@@ -1,0 +1,18 @@
+.btnSubmit {
+  margin: 0 12px 35px 0;
+  float: right;
+}
+
+.center {
+  align-items: center;
+  margin-left: 291px;
+}
+
+.conWidth {
+  width: 885px !important;
+}
+
+.border {
+  border: 1px solid lightgray;
+  float: right;
+}

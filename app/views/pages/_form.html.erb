@@ -1,15 +1,16 @@
-<%= form_for @page do |f| %>
-
-  <%= f.label :text %>
-  <%= f.text_area :text %>
-
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-
-
+<div class="container conWidth">
+  <%= form_for @page do |f| %>
+    <div class="form-group">
+      <%= f.label :text %>
+      <%= f.text_area :text, class: "form-control", placeholder: "Enter your text here" %>
+      <br>
+      <%= f.label :image_url %>
+      <%= f.text_field :image_url, class: "form-control", placeholder: "Enter your image's address here" %>
+    </div>
+  <br>
   <%= f.label :book_id %>
   <%= f.collection_select(:book_id, Book.all, :id, :title) %>
-
-  <%= f.submit (@page.new_record? ? "Create" : "Update") %>
-
-<% end %>
+  <br>
+  <%= f.submit (@page.new_record? ? "Create" : "Update"), class: "btn btn-primary btn-lg btnSubmit"  %>
+  <% end %>
+</div>

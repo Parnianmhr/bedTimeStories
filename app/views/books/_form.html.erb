@@ -1,12 +1,15 @@
-<%= form_for @book do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<div class="container conWidth">
+  <%= form_for @book do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Enter the title here" %>
+    <br>
 
-
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-
-  <%= f.submit "Create" %>
-
-<% end %>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url, class: "form-control", placeholder: "Enter your image's address here" %>
+  </div>
+  <br>
+  <%= f.submit "Create", class: "btn btn-primary btn-lg btnSubmit" %>
+  <% end %>
+</div>

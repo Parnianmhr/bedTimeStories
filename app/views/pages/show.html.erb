@@ -1,16 +1,22 @@
+
 <p><%= image_tag @page.image_url, class:"page-image" %></p>
 
 <div class="page-text">
-<p><%= @page.text%></p>
+<p><%= @page.text%></p>  
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5"><%= image_tag @page.image_url, class:"page-image" %></div>
+    <div class="col-md-7 border"><%= @page.text%></div>
+  </div>
 
-<%= link_to "Edit", edit_page_path(@page.id) %>
-<%= link_to "Delete", page_path(@page.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to "Edit", edit_page_path(@page.id), class: "btn btn-primary btn-lg btnSubmit" %>
+  <%= link_to "Delete", page_path(@page.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary btn-lg btnSubmit" %>
 
-<% if @previous %>
-  <%= link_to "Previous", @previous %>
-<% end %>
+  <% if @previous %>
+    <%= link_to "Previous", @previous, class: "btn btn-primary btn-lg btnSubmit" %>
+  <% end %>
 
-<% if @next %>
-  <%= link_to "Next", @next %>
+  <% if @next %>
+    <%= link_to "Next", @next, class: "btn btn-primary btn-lg btnSubmit" %>
 <% end %>

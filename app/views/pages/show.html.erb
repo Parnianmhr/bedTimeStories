@@ -2,8 +2,10 @@
   <h1>Page <%= @page.id%></h1>
 </div>
 <div class="container">
+  <div class="row">
     <div><%= image_tag @page.image_url, class:"page-image" %></div>
-    <div<%= @page.text%></div>
+    <div class="col-md-6"><%= @page.text%><br></div>
+    <br>
   </div>
 
   <%= link_to "Edit", edit_page_path(@page.id), class: "btn btn-primary btn-lg btnSubmit" %>
@@ -16,3 +18,4 @@
   <% if @next %>
     <%= link_to "Next", @next, class: "btn btn-primary btn-lg btnSubmit" %>
 <% end %>
+</div>

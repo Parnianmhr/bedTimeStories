@@ -11,8 +11,10 @@
 
 <% if @book.pages.any? %>
   <ul>
+    <% count = 0 %>
     <% @book.pages.each do |page| %>
-      <li><%= link_to page.id, pages_path(page.id)%></li>
+    <% count += 1 %>
+      <li><%= link_to "Page #{count} (id: #{page.id})", book_page_path(@book.id, page.id)%></li>
     <% end %>
   </ul>
 <% else %>

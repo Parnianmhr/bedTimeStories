@@ -21,7 +21,6 @@ header {
   font-family: 'Alfa Slab One', cursive;
   /*font-family: 'Fontdiner Swanky', cursive;*/
   /*font-family: 'Chango', cursive;*/
-  background-color: lightgrey;
   max-width: 940px;
   width: 100%;
   margin: 0 auto;
@@ -31,7 +30,45 @@ header {
 }
 
 footer {
-  background-color: lightgrey;
+  background-color: #70a8ea;
   text-align: center;
   padding: 20px;
+}
+
+footer p {
+  color: white;
+  margin: 0;
+}
+
+.main-title a {
+  text-decoration: none;
+  color: #345071;
+}
+
+/* =================================
+  Banner
+==================================== */
+
+.banner {
+  background-image: url("http://oi68.tinypic.com/20po9pj.jpg");
+  background-size: cover;
+  background-position-y: 50%;
+  padding: 40px 0 20px;
+  text-align: left;
+  background-repeat: no-repeat;
+}
+
+.banner h1,h3 {
+  margin-left: 400px;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin-bottom: -10px;
+}
+
+.banner-button {
+  margin-left: 400px;
+  margin-bottom: 56px;
 }

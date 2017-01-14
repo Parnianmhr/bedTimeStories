@@ -5,8 +5,10 @@
 <body>
   <h1 class= "page-title">Pages</h1>
 
+  <% count = 0 %>
   <% @pages.each do |page| %>
-    <p><%= link_to "Page #{page.id}", page_path(page.id), class:"page-links"%></p>
+  <% count += 1 %>
+    <p><%= link_to "Page #{count} (id: #{page.id})", page_path(page.id), class:"page-links"%></p>
 
   <% end %>
 

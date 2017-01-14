@@ -1,7 +1,8 @@
 <!-- book index page -->
-
 <section class="banner">
-  <h1>Librabry</h1>
+  <h1>ENJOY WRITING TOGETHER</h1>
+  <h3>Start writing your own book now!</h3>
+  <%= link_to "Add a new book", new_book_path, class: "book-button banner-button" %>
 </section>
 
 <section class="book-gallery">
@@ -14,5 +15,3 @@
   </article>
   <% end %>
 </section>
-
-<%= link_to "New Book", new_book_path, class: "book-button" %>

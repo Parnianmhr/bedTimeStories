@@ -5,5 +5,8 @@ class Page < ApplicationRecord
 
   validates :image_url, length: { maximum: 255 }, allow_blank: true
 
-  
+  def self.order_by_id
+    order(:id)
+  end
+
 end

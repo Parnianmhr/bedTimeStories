@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-      @pages = Page.all
+      @pages = Page.all.order_by_id
   end
 
   def show

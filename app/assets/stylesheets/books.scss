@@ -9,7 +9,7 @@
 }
 
 .book-gallery {
-  // flex: 1; /*needed for sticky footer*/
+  flex: 1; /*needed for sticky footer*/
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +25,7 @@
 
 .book-title {
   text-decoration: none;
+  color: #8f207c;
 }
 
 .book-image {
@@ -35,9 +36,8 @@
 
 .book-button {
   display: inline-block;
-  // background-color: #D32F2F;
-  background-color: cornflowerblue;
-  color: #fff;
+  background-color: #345071;
+  color: white;
   padding: 10px;
   border-radius: 4px;
   text-decoration: none;

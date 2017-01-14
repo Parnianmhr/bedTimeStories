@@ -13,19 +13,20 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/application.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+
   </head>
 
 
 
 <body>
   <header>
-    <h1 class="main-title"> Bedtime Stories </h1>
+    <h1 class="main-title"><%= link_to "Bedtime Stories", root_path %></h1>
   </header>
 
     <%= yield %>
 
   <footer>
-      &copy;2017 BedTimeStories
+      <p>&copy;2017 BedTimeStories</p>
   </footer>
 </body>
 

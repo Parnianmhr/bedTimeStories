@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   def index
       @pages = Page.all
-    end
+  end
 
     def show
       @page = Page.find(params[:id])
@@ -42,7 +42,6 @@ class PagesController < ApplicationController
 
       redirect_to pages_path
     end
-
 
     private
 

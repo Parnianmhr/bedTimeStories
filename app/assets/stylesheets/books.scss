@@ -1,3 +1,44 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.align-left {
+  margin-left: 50px;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.book-gallery {
+  // flex: 1; /*needed for sticky footer*/
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  background-color: #ECECEC;
+  width: calc(100%/3 - 40px);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+.book-title {
+  text-decoration: none;
+}
+
+.book-image {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.book-button {
+  display: inline-block;
+  // background-color: #D32F2F;
+  background-color: cornflowerblue;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}

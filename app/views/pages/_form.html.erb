@@ -1,15 +1,17 @@
 <%= form_for @page do |f| %>
 
   <%= f.label :text %>
-  <%= f.text_field :text %>
-
+  <%= f.text_area :text, cols: "60", rows: "10" %>
+  <!-- <%= f.text_area :image_url, size: "10x10" %> -->
+  <!-- <%= f.text_field :image_url, size: "30" %> -->
 
   <%= f.label :image_url %>
   <%= f.text_field :image_url %>
 
+
   <%= f.label :book_id %>
   <%= f.collection_select(:book_id, Book.all, :id, :title) %>
-  
+
   <%= f.submit (@page.new_record? ? "Create" : "Update") %>
 
 <% end %>

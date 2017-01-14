@@ -1,7 +1,10 @@
 <h1>Page <%= @page.id%></h1>
 
-<p><%= image_tag @page.image_url %></p>
+<p><%= image_tag @page.image_url, class:"page-image" %></p>
+
+<div class="page-text">
 <p><%= @page.text%></p>
+</div>
 
 <%= link_to "[Edit]", edit_page_path(@page.id) %>
 <%= link_to "[Delete]", page_path(@page.id), method: :delete, data: { confirm: "Are you sure?" } %>

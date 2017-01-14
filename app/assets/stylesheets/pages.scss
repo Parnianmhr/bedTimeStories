@@ -1,3 +1,38 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+  color: black;
+}
+
+.page-title{
+  text-align: center;
+  align-items: center;
+  text-color: red;
+}
+
+.page-links{
+  text-align: center;
+  align-items: center;
+  margin-left: 400px;
+  background-color: white;
+}
+
+
+.new-button {
+  color: #333333;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.page-image{
+  height: 25%;
+  width: 25%;
+  margin-left: 200px;
+}
+
+.page-text{
+  text-align: center;
+  align-items: center;
+  margin-left: 400px;
+  background-color: white;
+
+}

@@ -2,9 +2,8 @@
   <h1>Page <%= @page.id%></h1>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="col-md-5"><%= image_tag @page.image_url, class:"page-image" %></div>
-    <div class="col-md-7 border"><%= @page.text%></div>
+    <div><%= image_tag @page.image_url, class:"page-image" %></div>
+    <div<%= @page.text%></div>
   </div>
 
   <%= link_to "Edit", edit_page_path(@page.id), class: "btn btn-primary btn-lg btnSubmit" %>

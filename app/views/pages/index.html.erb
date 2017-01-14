@@ -1,5 +1,16 @@
-<h1>Pages</h1>
+<head>
+  <link rel="stylesheet" href="pages.scss">
+</head>
 
-<% @pages.each do |page| %>
-  <p><%= link_to "Page #{page.id}", page_path(page.id) %></p>
-<% end %>
+<body>
+  <h1 class= "page-title">Pages</h1>
+
+  <% @pages.each do |page| %>
+    <p><%= link_to "Page #{page.id}", page_path(page.id), class:"page-links"%></p>
+
+  <% end %>
+
+  <div class="new-button">
+  <%= link_to "[New]", new_page_path %>
+  </div>
+</body>

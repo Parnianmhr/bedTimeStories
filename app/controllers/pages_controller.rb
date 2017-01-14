@@ -6,7 +6,8 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
-    @last_page = Page.last
+    @previous = Page.where("id < ?", params[:id]).order(:id).first
+    @next = Page.where("id > ?", params[:id]).order(:id).first 
   end
 
   def new

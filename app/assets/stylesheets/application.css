@@ -29,6 +29,12 @@ header {
   align-items: center;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 footer {
   background-color: #70a8ea;
   text-align: center;
@@ -45,6 +51,9 @@ footer p {
   color: #345071;
 }
 
+.sticky-footer {
+  flex: 1;
+}
 /* =================================
   Banner
 ==================================== */

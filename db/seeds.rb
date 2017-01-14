@@ -1,7 +1,7 @@
 Page.delete_all
 Book.delete_all
 
-page1 = Page.create( {image_url: "http://bit.ly/2j7yiR6", text: "text1 test"})
+page1 = Page.create( {image_url: "http://bit.ly/2j7yiR6", text: "hgsdg shdgshfg sdhfgshdgf hasdgfhsagf hsfghsadgf asdhfgsagdhf ashdfgshdf ahsdfgsagdhf hasdfgsdfg"})
 page2 = Page.create( {image_url: "http://bit.ly/2j7yiR6", text: "text2 test"})
 page3 = Page.create( {image_url: "http://bit.ly/2j7yiR6", text: "text3 test"})
 

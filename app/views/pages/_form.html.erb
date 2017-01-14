@@ -1,7 +1,7 @@
 <%= form_for @page do |f| %>
 
   <%= f.label :text %>
-  <%= f.text_field :text %>
+  <%= f.text_area :text %>
 
 
   <%= f.label :image_url %>
@@ -9,7 +9,7 @@
 
   <%= f.label :book_id %>
   <%= f.collection_select(:book_id, Book.all, :id, :title) %>
-  
+
   <%= f.submit (@page.new_record? ? "Create" : "Update") %>
 
 <% end %>

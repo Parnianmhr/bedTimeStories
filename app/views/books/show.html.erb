@@ -1,26 +1,24 @@
 
 
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @book.title %>
-</p>
-
-<h4>List of pages</h4>
-
+<div class="center">
+  <h2>Name: <%= @book.title %></h2>
+  <%= image_tag @book.image_url, class: "image_book" %>
+</div>
+<h3 class="center">List of pages</h3>
+<div class="center">
 <% if @book.pages.any? %>
   <ul>
     <% count = 0 %>
     <% @book.pages.each do |page| %>
     <% count += 1 %>
-      <li><%= link_to "Page #{count} (id: #{page.id})", book_page_path(@book.id, page.id)%></li>
+      <li class="list"><%= link_to "Page #{count} (id: #{page.id})", book_page_path(@book.id, page.id)%></li>
     <% end %>
   </ul>
 <% else %>
   <p>There are no pages in this book.</p>
 <% end %>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to "New", new_page_path %>
-<%= link_to 'Back', books_path %>
+</div>
+<%= link_to 'Edit', edit_book_path(@book), class: "btn btn-primary btn-lg btnSubmit"  %> |
+<%= link_to "New", new_page_path, class: "btn btn-primary btn-lg btnSubmit" %>
+<%= link_to 'Back', books_path, class: "btn btn-primary btn-lg btnSubmit"  %>

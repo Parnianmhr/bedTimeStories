@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
+    @last_page = Page.last
   end
 
   def new

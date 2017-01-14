@@ -6,9 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<link href="https://fonts.googleapis.com/css?family=Chango|Fontdiner+Swanky" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stylesheets/application.css">
   </head>
 
-  <body>
+
+
+<body>
+  <header class="header">
+    <h1 class="main-title"> BedTimeStories </h1>
+  </header>
     <%= yield %>
-  </body>
+
+  <footer class="footer">
+      2017 BedTimeStories
+  </footer>
+</body>
+
 </html>

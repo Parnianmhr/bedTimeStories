@@ -28,6 +28,11 @@
   color: #8f207c;
 }
 
+.book-title:hover {
+  text-decoration: none;
+  color: #8f207c
+}
+
 .book-image {
   height: 350px;
   width: 100%;
@@ -40,5 +45,10 @@
   color: white;
   padding: 10px;
   border-radius: 4px;
+  text-decoration: none;
+}
+
+.book-button:hover {
+  color: white;
   text-decoration: none;
 }

@@ -51,6 +51,10 @@ footer p {
   color: #345071;
 }
 
+.main-tile a:hover {
+  text-decoration: none;
+}
+
 .sticky-footer {
   flex: 1;
 }

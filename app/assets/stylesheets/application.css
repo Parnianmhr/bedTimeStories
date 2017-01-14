@@ -1,4 +1,4 @@
- /* This is a manifest file that'll be compiled into application.css, which will include all the files
+/* This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
@@ -14,27 +14,24 @@
  */
 
 *{
-  background-color: white;
+  box-sizing: border-box;
 }
 
-.header {
-  color: white;
-  background-color: grey;
-  font-family: 'Fontdiner Swanky', cursive;
+header {
+  font-family: 'Alfa Slab One', cursive;
+  /*font-family: 'Fontdiner Swanky', cursive;*/
   /*font-family: 'Chango', cursive;*/
-  height: 100px;
-  padding-top: center;
-  max-width: 100%;
+  background-color: lightgrey;
+  max-width: 940px;
   width: 100%;
-  margin: auto;
-text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer {
-  background: #333333;
-  color: white;
+footer {
+  background-color: lightgrey;
   text-align: center;
-  padding-top: 15px;
-  margin-top: 5%;
-  height: 50px;
+  padding: 20px;
 }

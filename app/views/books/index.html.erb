@@ -1,10 +1,18 @@
-<h1>Librabry</h1>
+<!-- book index page -->
 
-<% @books.each do |book| %>
-  <p><%= link_to book.title, book_path(book.id) %></p>
-  <p><%= link_to "[Delete]", book_path(book.id), method: :delete, data: { confirm: "Are you sure?"} %>
-  <%= link_to "[Edit]", edit_book_path(book.id)%></p>
-  <%= image_tag book.image_url %>
-<% end %>
+<section class="banner">
+  <h1>Librabry</h1>
+</section>
 
-<%= link_to "[New Book]", new_book_path %>
+<section class="book-gallery">
+  <% @books.each do |book| %>
+  <article class="book-card">
+    <div><%= image_tag book.image_url, class: "book-image" %></div>
+    <h2><%= link_to book.title, pages_path(book.id), class: "book-title" %></h2>
+    <%= link_to "Delete", book_path(book.id), method: :delete, data: { confirm: "Are you sure?"}, class: "book-button" %>
+    <%= link_to "Edit", edit_book_path(book.id), class: "book-button" %>
+  </article>
+  <% end %>
+</section>
+
+<%= link_to "New Book", new_book_path, class: "book-button" %>

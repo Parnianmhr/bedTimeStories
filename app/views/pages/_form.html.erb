@@ -3,9 +3,9 @@
   <%= f.label :text %>
   <%= f.text_area :text %>
 
-
   <%= f.label :image_url %>
   <%= f.text_field :image_url %>
+
 
   <%= f.label :book_id %>
   <%= f.collection_select(:book_id, Book.all, :id, :title) %>
